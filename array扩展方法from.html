@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrayform方法</title>
+</head>
+
+<body>
+    <script>
+        var arrlike = {
+            "0": "andy",
+            "1": "18",
+            "2": "玩网游",
+            "length": 3
+        }
+        var newarr = Array.from(arrlike, a => a + 2);//后面可以跟一个回调函数，对函数里面的元素进行处理，这个a就代指单独的元素，实际上是个形参
+        console.log(newarr);//这个方法可以把伪数组变成真数组，这个方法针对的不是具体数组
+    </script>
+</body>
+
+</html>

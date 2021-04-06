@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const关键词</title>
+</head>
+
+<body>
+    <script>
+        //使用const关键字申明的是常量，而且是有会计作用
+        if (true) {
+            const a = 20;
+            if (true) {
+                const a = 10;
+                console.log(a);
+            }
+            console.log(a);
+        }
+        // console.log(abc);这样的话就是未定义
+        //使用该关键词必须给初始值
+        //也就是没有 const a;这样的写法
+        //const申明的简单数组类型是不能够更改的
+        const b = 10;
+        // b = 11;//更改变量的话就会报错
+        console.log(b);
+        //复杂数据类型可以部分更改
+        const arr = [1, 2];
+        arr[0] = 'a';
+        console.log(arr);
+        arr = [1, 2];//这样更改就是不被允许的，不可以赋值，但是内部数据可以更改
+    </script>
+</body>
+
+</html>
